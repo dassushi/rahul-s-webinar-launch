@@ -7,30 +7,27 @@ const PhaseSection = () => {
       title: "BUILD",
       icon: Layers,
       description: "Set up your brand name, logo, and website (Shopify/WordPress)",
-      color: "from-secondary to-secondary/70",
     },
     {
       number: "02",
       title: "SELL",
       icon: ShoppingCart,
       description: "Learn how to sell on Instagram, WhatsApp & your website",
-      color: "from-primary to-primary/70",
     },
     {
       number: "03",
       title: "SCALE",
       icon: TrendingUp,
       description: "Run ads, retarget customers, grow traffic & automate",
-      color: "from-accent to-accent/70",
     },
   ];
 
   return (
-    <section className="py-20 relative">
+    <section className="py-20 bg-card relative">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            What You'll <span className="text-gradient-gold">Learn</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+            What You'll <span className="text-primary">Learn</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             The complete 90-day roadmap to building your clothing brand
@@ -43,18 +40,15 @@ const PhaseSection = () => {
               key={index}
               className="relative group"
             >
-              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl" 
-                   style={{ background: `linear-gradient(135deg, hsl(var(--primary) / 0.2), transparent)` }} />
-              
-              <div className="relative bg-card border border-border rounded-2xl p-8 h-full hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+              <div className="relative bg-background border border-border rounded-2xl p-8 h-full hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 shadow-card">
                 {/* Phase number */}
-                <div className="text-6xl font-display font-bold text-muted/30 mb-4">
+                <div className="text-6xl font-display font-bold text-muted/50 mb-4">
                   {phase.number}
                 </div>
                 
                 {/* Icon */}
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${phase.color} flex items-center justify-center mb-4`}>
-                  <phase.icon className="w-7 h-7 text-background" />
+                <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-4">
+                  <phase.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
 
                 {/* Content */}
@@ -70,7 +64,7 @@ const PhaseSection = () => {
         </div>
 
         {/* Outcome */}
-        <div className="mt-16 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
+        <div className="mt-16 bg-secondary border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto shadow-soft">
           <h3 className="font-display text-2xl font-bold text-center mb-8 text-primary">
             Your 90-Day Outcome
           </h3>

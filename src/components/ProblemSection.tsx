@@ -9,10 +9,10 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section className="py-20 bg-card relative">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
             Why You Should{" "}
             <span className="text-destructive">Stop</span>{" "}
             Relying on Marketplaces
@@ -39,7 +39,7 @@ const ProblemSection = () => {
           </div>
 
           {/* Solution */}
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 space-y-6 glow-gold">
+          <div className="bg-secondary border border-primary/20 rounded-2xl p-8 space-y-6 shadow-soft">
             <h3 className="font-display text-xl font-semibold text-primary">
               The Website Solution
             </h3>

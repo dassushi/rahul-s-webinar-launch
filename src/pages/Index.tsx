@@ -8,6 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BonusSection from "@/components/BonusSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import StickyCtaBar from "@/components/StickyCtaBar";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <BonusSection />
       <CTASection />
       <Footer />
+      <StickyCtaBar />
     </main>
   );
 };

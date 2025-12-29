@@ -1,84 +1,94 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { Calendar, Clock, Video, Globe } from "lucide-react";
 import rahulPortrait from "@/assets/rahul-portrait.jpg";
 
 const HeroSection = () => {
+  const infoCards = [
+    { icon: Calendar, label: "Date", value: "27 December", subtext: "(Saturday)" },
+    { icon: Clock, label: "Time", value: "12 PM", subtext: "" },
+    { icon: Video, label: "Platform", value: "Zoom", subtext: "" },
+    { icon: Globe, label: "Language", value: "English & Hindi", subtext: "" },
+  ];
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-16">
-      {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1.5s' }} />
-      </div>
+    <section className="min-h-screen bg-gradient-hero pt-8 pb-24">
+      <div className="container">
+        {/* Top Badge */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center bg-secondary text-secondary-foreground rounded-full px-6 py-3 text-sm font-medium">
+            For Working Professionals & Aspiring Entrepreneurs
+          </div>
+        </div>
 
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left content */}
-          <div className="space-y-8 animate-slide-up">
-            <div className="inline-flex items-center gap-2 bg-muted/50 border border-border rounded-full px-4 py-2 text-sm">
-              <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-muted-foreground">Free Orientation Webinar</span>
-            </div>
+        {/* Main Headline */}
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-2">
+            Join 2-Hours Live Masterclass And
+          </h1>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            <span className="text-primary underline-hand">Launch Your Clothing Brand In Under ₹1 Lakh!</span>
+          </h2>
+        </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              Build Your Own{" "}
-              <span className="text-gradient-gold">Clothing Brand</span>{" "}
-              in Just{" "}
-              <span className="text-primary">90 Days</span>
-            </h1>
-
-            <p className="text-lg text-muted-foreground max-w-xl">
-              Stop renting platforms. Start owning your brand. Learn the complete system to launch your website, sell online, and scale to 6 figures — no tech skills required.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" className="group">
-                Join Free Orientation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="heroOutline" size="xl" className="group">
-                <Play className="w-5 h-5" />
-                Watch Preview
-              </Button>
-            </div>
-
-            <div className="flex items-center gap-6 pt-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">15,000+</div>
-                <div className="text-sm text-muted-foreground">Sellers Trained</div>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">2M+</div>
-                <div className="text-sm text-muted-foreground">Social Following</div>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">IIM-A</div>
-                <div className="text-sm text-muted-foreground">Alumni</div>
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-6xl mx-auto">
+          {/* Left - Image with Info */}
+          <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-soft">
+              <img
+                src={rahulPortrait}
+                alt="Rahul Sharma - Founder of Qurbat"
+                className="w-full h-auto object-cover"
+              />
+              
+              {/* Overlay Info */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 via-foreground/70 to-transparent p-6">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-primary-foreground mb-1">
+                  Rahul Sharma – Founder of Qurbat
+                </h3>
+                <p className="text-primary-foreground/80 text-sm">
+                  (Multi-City Fashion Brand)
+                </p>
+                <p className="text-primary-foreground/70 text-xs mt-2">
+                  IIM Ahmedabad Alumnus, 15L+ Community Mentor, TEDx Speaker & Retail Excellence Awardee
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Right content - Image */}
-          <div className="relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative">
-              {/* Decorative frame */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 rounded-3xl blur-xl" />
-              <div className="absolute -inset-1 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl" />
-              
-              <img
-                src={rahulPortrait}
-                alt="Rahul Sharma - Brand Building Expert"
-                className="relative rounded-2xl w-full max-w-md mx-auto object-cover shadow-2xl"
-              />
-
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl p-4 shadow-lg animate-float">
-                <div className="text-xs text-muted-foreground">Limited Seats</div>
-                <div className="text-lg font-bold text-primary">Only 100 Spots</div>
-              </div>
+          {/* Right - Info Cards */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              {infoCards.map((card, index) => (
+                <div
+                  key={index}
+                  className="bg-card rounded-xl p-5 shadow-card border border-border flex items-start gap-4"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
+                    <card.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-muted-foreground text-sm">{card.label}</p>
+                    <p className="font-bold text-foreground text-lg">{card.value}</p>
+                    {card.subtext && (
+                      <p className="text-muted-foreground text-sm">{card.subtext}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
+
+            {/* CTA Button */}
+            <a
+              href="#register"
+              className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground text-center py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-soft hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Register Now At <span className="text-yellow-300">Rs. 99/-</span>
+            </a>
+
+            {/* Guarantee */}
+            <p className="text-center text-primary font-bold italic text-lg">
+              100% SATISFACTION GUARANTEED!!
+            </p>
           </div>
         </div>
       </div>

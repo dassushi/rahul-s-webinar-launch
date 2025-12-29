@@ -1,4 +1,4 @@
-import { CheckCircle, BookOpen, CreditCard, Megaphone, FileText, Users } from "lucide-react";
+import { BookOpen, CreditCard, Megaphone, FileText, Users } from "lucide-react";
 
 const WhatYouGet = () => {
   const benefits = [
@@ -10,11 +10,11 @@ const WhatYouGet = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section className="py-20 bg-card relative">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            What You <span className="text-gradient-gold">Get</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+            What You <span className="text-primary">Get</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Everything you need to build and grow your brand
@@ -26,9 +26,9 @@ const WhatYouGet = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/50 hover:bg-card/80 transition-all duration-300"
+                className="flex items-center gap-4 bg-background border border-border rounded-xl p-5 hover:border-primary/50 transition-all duration-300 shadow-card"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
                   <benefit.icon className="w-6 h-6 text-primary" />
                 </div>
                 <span className="text-foreground font-medium">{benefit.text}</span>

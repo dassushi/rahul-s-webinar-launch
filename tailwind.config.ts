@@ -51,16 +51,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(45 85% 55%)",
-          light: "hsl(45 90% 70%)",
-          dark: "hsl(35 90% 45%)",
-        },
-        teal: {
-          DEFAULT: "hsl(180 45% 35%)",
-          light: "hsl(180 50% 45%)",
-          dark: "hsl(195 40% 15%)",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",

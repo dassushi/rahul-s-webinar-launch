@@ -15,13 +15,11 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/30 to-transparent" />
-      
+    <section className="py-20 bg-background relative overflow-hidden">
       <div className="container relative">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Success <span className="text-gradient-gold">Stories</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+            Success <span className="text-primary">Stories</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Real results from real sellers
@@ -32,7 +30,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative bg-card border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-300"
+              className="relative bg-card border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-300 shadow-card"
             >
               <Quote className="w-10 h-10 text-primary/20 mb-4" />
               
@@ -47,7 +45,7 @@ const TestimonialsSection = () => {
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
                   <span className="text-primary font-bold">{testimonial.name[0]}</span>
                 </div>
                 <div>

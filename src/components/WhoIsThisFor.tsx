@@ -9,14 +9,11 @@ const WhoIsThisFor = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/30 to-transparent" />
-      
+    <section className="py-20 bg-background relative overflow-hidden">
       <div className="container relative">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Who Is This <span className="text-gradient-gold">For?</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+            Who Is This <span className="text-primary">For?</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             This webinar is perfect for you if...
@@ -28,10 +25,9 @@ const WhoIsThisFor = () => {
             {criteria.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 bg-card/50 border border-border rounded-xl p-6 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="flex items-start gap-4 bg-card border border-border rounded-xl p-6 shadow-card hover:border-primary/50 transition-all duration-300 group"
               >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                   <CheckCircle2 className="w-5 h-5 text-primary" />
                 </div>
                 <p className="text-foreground text-lg pt-1.5">{item}</p>
