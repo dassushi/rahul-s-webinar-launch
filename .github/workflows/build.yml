@@ -1,4 +1,4 @@
-name: Build & Prepare for Hostinger
+name: Build & Deploy to Hostinger
 
 on:
   push:
@@ -15,29 +15,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install deps
-        run: npm ci
+      - run: npm ci
+      - run: npm run build
 
-      - name: Build
-        run: npm run build
-
-      - name: Copy dist contents to root
+      - name: Prepare root build
         run: |
           rm -rf assets index.html
           cp -r dist/* .
 
-      - name: Commit build output
+      - name: Commit only build files
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add .
-          git commit -m "Deploy build to public_html root" || echo "No changes"
+          git add index.html assets favicon.ico
+          git commit -m "Deploy build to public_html" || echo "No changes"
           git push
