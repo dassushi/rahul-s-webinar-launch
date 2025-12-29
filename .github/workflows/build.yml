@@ -21,10 +21,15 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Commit dist folder
+      - name: Copy dist to root
+        run: |
+          rm -rf assets index.html
+          cp -r dist/* .
+
+      - name: Commit root build files
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add dist
-          git commit -m "Deploy build to public_html" || echo "No changes"
+          git add index.html assets
+          git commit -m "Deploy build to public_html root" || echo "No changes"
           git push
