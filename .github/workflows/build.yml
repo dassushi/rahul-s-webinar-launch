@@ -1,8 +1,11 @@
-name: Build Vite App
+name: Build & Prepare for Hostinger
 
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'index.html'
+      - 'assets/**'
 
 permissions:
   contents: write
@@ -26,10 +29,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Commit dist
+      - name: Copy dist contents to root
+        run: |
+          rm -rf assets index.html
+          cp -r dist/* .
+
+      - name: Commit build output
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add dist
-          git commit -m "Auto build dist" || echo "No changes"
+          git add .
+          git commit -m "Deploy build to public_html root" || echo "No changes"
           git push
