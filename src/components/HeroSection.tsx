@@ -52,8 +52,8 @@ const HeroSection = () => {
               
               {/* Overlay Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-5">
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-1">
-                  Rahul Sharma – Founder of Qurbat
+                <h3 className="font-display text-xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-1 sm:text-xl font-extrabold">
+                  Rahul Sharma – Founder and CEO of Qurbat
                 </h3>
                 <p className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-sm">
                   (Multi-City Fashion Brand)
