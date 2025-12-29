@@ -4,7 +4,7 @@ const StickyCtaBar = () => {
       <div className="container py-3 sm:py-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-primary-foreground">
           <div className="text-primary-foreground text-center sm:text-left">
-            <p className="sm:text-base text-base font-extrabold text-destructive">
+            <p className="sm:text-base text-base font-extrabold text-primary-foreground">
               🚨 Hurry! Only a few seats left
             </p>
             <p className="text-primary-foreground/80 text-xs sm:text-sm hidden sm:block">
