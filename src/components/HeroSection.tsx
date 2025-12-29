@@ -22,7 +22,7 @@ const HeroSection = () => {
     value: "English & Hindi",
     subtext: ""
   }];
-  return <section className="min-h-screen bg-gradient-hero pt-8 pb-24">
+  return <section className="min-h-screen bg-gradient-hero pt-6 pb-12">
       <div className="container">
         {/* Top Badge */}
         <div className="flex justify-center mb-8">
@@ -33,13 +33,9 @@ const HeroSection = () => {
 
         {/* Main Headline */}
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-2">
-            Join 2-Hours Live Masterclass And
-          </h1>
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-2">Join 2-Hours Live Masterclass</h1>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            <span className="text-primary underline-hand">Build your own brand in 90 days.</span>
-            <br />
-            <span className="text-primary underline-hand">Stop Renting, Start Owning.</span>
+            <span className="text-primary underline-hand">Build your own brand in 90 days. Stop Renting, Start Owning.</span>
           </h2>
         </div>
 
@@ -48,17 +44,15 @@ const HeroSection = () => {
           {/* Left - Image with Info */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-glow min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
-              <img alt="Rahul Sharma receiving International Business Award" className="w-full h-full object-cover object-center absolute inset-0" src="/lovable-uploads/c71cc348-0da2-478f-8f87-9d76a8fdbcab.png" />
+              <img alt="Rahul Sharma receiving International Business Award" className="w-full h-full object-cover object-center absolute inset-0" src="/lovable-uploads/c71cc348-0da2-478f-8f87-9d76a8fdbcab.png" fetchPriority="high" width={750} height={500} />
               
               {/* Overlay Info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-foreground/85 backdrop-blur-md p-5">
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-primary-foreground drop-shadow-lg mb-1">
-                  Rahul Sharma – Founder of Qurbat
-                </h3>
-                <p className="text-primary-foreground drop-shadow-md text-sm">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-5">
+                <h3 className="font-display text-xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-1 sm:text-xl font-extrabold">Rahul Sharma – Founder & CEO of Qurbat</h3>
+                <p className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-sm">
                   (Multi-City Fashion Brand)
                 </p>
-                <p className="text-primary-foreground/90 drop-shadow-md text-xs mt-2">
+                <p className="text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-xs mt-2">
                   IIM Ahmedabad Alumnus, 15L+ Community Mentor, TEDx Speaker & Retail Excellence Awardee
                 </p>
               </div>
@@ -81,7 +75,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button */}
-            <a href="#register" className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground text-center py-5 sm:py-6 rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 shadow-glow-lg hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] ring-4 ring-primary/30 animate-pulse-subtle">
+            <a href="https://risewithrahul.creatorlabs.in/add-to-cart" target="_blank" rel="noopener noreferrer" className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground text-center py-5 sm:py-6 rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 shadow-glow-lg hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] ring-4 ring-primary/30 animate-pulse-subtle">
               🚀 Register Now At <span className="text-yellow-300 font-extrabold">Rs. 99/-</span>
             </a>
 
