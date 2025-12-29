@@ -1,8 +1,6 @@
 import { ArrowRight, Clock, Users } from "lucide-react";
-
 const CTASection = () => {
-  return (
-    <section id="register" className="py-10 bg-background relative overflow-hidden pb-20">
+  return <section id="register" className="py-20 bg-background relative overflow-hidden pb-32">
       <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
@@ -25,12 +23,9 @@ const CTASection = () => {
             </div>
           </div>
 
-          <a
-            href="#register"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-5 rounded-xl text-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-soft group"
-          >
-            🚀 Join the Free Orientation Now
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <a href="#register" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-5 rounded-xl text-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-soft group">
+            🚀 Join the Masterclass Now
+            <ArrowRight className="group-hover:translate-x-1 transition-transform h-[40px] w-[40px]" />
           </a>
 
           <p className="text-muted-foreground text-sm mt-6">
@@ -38,8 +33,6 @@ const CTASection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTASection;
